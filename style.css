@@ -1,0 +1,77 @@
+@keyframes obstaculoAnimacao {
+    from {
+        right: 0;
+    }
+    to {
+        right: 100%;
+    }
+}
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+@keyframes nuvemAnimacao{
+    from{
+        right: -550px;
+    }
+    to{
+        right: 100vw;
+    }   
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.jogo {
+    background: linear-gradient(#87CEEB, #E0F6FF);
+    width: 100vw;
+    height: calc(100vh - 20px);
+    position: relative;
+    border-bottom: solid 20px green;
+}
+.obstaculo {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    right: -80px;
+    animation: obstaculoAnimacao 2s infinite linear;
+}
+.mario {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+}
+.jump {
+    animation: jump 700ms ease-out;
+}
+.nuvem{
+    position: absolute;
+    padding-top: 10px;
+    width: 500px;
+    animation: nuvemAnimacao 10s linear infinite;
+    
+}
+#texto{
+    font-size: 50px;
+    padding-right: 60%;
+    padding-top: 20px;
+    padding-left: 20px;
+    color: aliceblue;
+    font-style: italic;
+}
